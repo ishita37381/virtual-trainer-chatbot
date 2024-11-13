@@ -1,23 +1,26 @@
+/* General Styles */
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
+  background-color: #f7f8fc;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
-  background-color: #f4f4f9;
 }
 
+/* Chatbot Container */
 .chat-container {
-  width: 350px;
-  height: 600px;
+  width: 400px;
   background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -25,61 +28,82 @@ body {
 
 .chat-header {
   background-color: #4a90e2;
-  color: #fff;
-  padding: 10px;
+  padding: 15px;
   text-align: center;
+  color: white;
+}
+
+.chat-header h2 {
+  margin: 0;
+  font-size: 18px;
 }
 
 .chat-box {
-  flex: 1;
-  padding: 10px;
+  padding: 20px;
+  height: 400px;
   overflow-y: auto;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #fafafa;
 }
 
 .chat-message {
-  margin: 10px 0;
-  display: flex;
+  max-width: 70%;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 1.4;
+  word-wrap: break-word;
 }
 
-.chat-message.user .message-content {
+.chat-message.bot {
+  background-color: #e5e5ea; /* Light grey bot messages */
+  color: #000;
+  align-self: flex-start;
+  
+}
+
+.chat-message.user {
   background-color: #4a90e2;
   color: #fff;
   align-self: flex-end;
-}
 
-.chat-message.bot .message-content {
-  background-color: #e5e5ea;
-  color: #000;
-}
-
-.message-content {
-  padding: 8px 12px;
-  border-radius: 20px;
-  max-width: 70%;
 }
 
 .chat-input {
   display: flex;
-  border-top: 1px solid #ddd;
-}
-
-.chat-input input {
-  flex: 1;
-  border: none;
   padding: 10px;
-  font-size: 16px;
+  background-color: #f1f1f1;
+  border-top: 1px solid #ddd;
+  align-items: center;
 }
 
-.chat-input button {
+#user-input {
+  width: 80%;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
   background-color: #4a90e2;
-  color: #fff;
+  color: white;
+  padding: 10px 15px;
+  margin-left: 13px;
   border: none;
-  padding: 10px 20px;
+  border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.chat-input button:hover {
+button:hover {
   background-color: #357ab8;
 }
 
-  
+/* Smooth scrolling */
+.chat-box {
+  scroll-behavior: smooth;
+}

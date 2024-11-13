@@ -1,51 +1,53 @@
-/* General Styles */
+/* signup.css */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
+    background-color: #f0f2f5;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    margin: 0;
 }
 
-.container {
-    background-color: #fff;
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    max-width: 400px;
+main {
     width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 h2 {
-    text-align: center;
     color: #333;
+    font-size: 24px;
     margin-bottom: 20px;
 }
 
-/* Form Input Styles */
 form {
     display: flex;
     flex-direction: column;
 }
 
 label {
-    margin: 10px 0 5px;
+    text-align: left;
+    margin-bottom: 5px;
     font-size: 14px;
-    color: #333;
+    color: #555;
 }
 
 input[type="text"],
 input[type="email"],
 input[type="password"] {
-    padding: 12px;
+    width: 100%;
+    padding: 10px;
+    /* margin-bottom: 15px; */
     border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 16px;
-    width: 100%;
+    color: #333;
     box-sizing: border-box;
-    transition: border-color 0.3s;
 }
 
 input[type="text"]:focus,
@@ -55,28 +57,26 @@ input[type="password"]:focus {
     outline: none;
 }
 
-/* Submit Button */
 button {
+    width: 100%;
+    padding: 12px;
     background-color: #007bff;
     color: #fff;
-    padding: 12px;
     border: none;
     border-radius: 4px;
     font-size: 16px;
     cursor: pointer;
-    margin-top: 20px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
     background-color: #0056b3;
 }
 
-/* Additional Text */
 p {
-    text-align: center;
+    margin-top: 15px;
     font-size: 14px;
-    color: #666;
+    color: #555;
 }
 
 p a {
@@ -86,4 +86,10 @@ p a {
 
 p a:hover {
     text-decoration: underline;
+}
+.error-message {
+    color: grey;
+    opacity: .8;
+    font-size: 12px;
+    text-align: start;
 }
